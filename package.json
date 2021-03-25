@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
-    "sql-start": "mysql --local_infile -u root -p < mySQL/schema.sql"
+    "start": "node server.js",
+    "remote-load": "mysql --local_infile -u michael -ppassword -h 3.12.155.160 < mySQL/schema.sql"
   },
   "repository": {
     "type": "git",

@@ -41,19 +41,19 @@ CREATE TABLE photos (
     ON DELETE CASCADE
 );
 
-LOAD DATA LOCAL INFILE './mySQL/clean_data/clean_questions.csv' INTO TABLE questions
+LOAD DATA LOCAL INFILE './clean_data/clean_questions.csv' INTO TABLE questions
 FIELDS TERMINATED BY ',' optionally enclosed by '"'
 LINES TERMINATED BY '\n'
 (id,product_id,body,date_written,asker_name,asker_email,reported,helpful);
 
 
 
-LOAD DATA LOCAL INFILE './mySQL/clean_data/clean_answers.csv' INTO TABLE answers
+LOAD DATA LOCAL INFILE './clean_data/clean_answers.csv' INTO TABLE answers
 FIELDS TERMINATED BY ',' optionally enclosed by '"'
 LINES TERMINATED BY '\n'
 (id,question_id,body,date_written,answerer_name,answerer_email,reported,helpful);
 
-LOAD DATA LOCAL INFILE './mySQL/clean_data/clean_answers_photos.csv' INTO TABLE photos
+LOAD DATA LOCAL INFILE './clean_data/clean_answers_photos.csv' INTO TABLE photos
 FIELDS TERMINATED BY ',' optionally enclosed by '"'
 LINES TERMINATED BY '\n'
 (id,answer_id,url);
